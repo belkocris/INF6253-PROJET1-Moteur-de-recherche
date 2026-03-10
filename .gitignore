@@ -3,6 +3,10 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+git add .gitignore
+git commit -m "Add SQLite to gitignore"
+
+
 # C extensions
 *.so
 
