@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Moteur de recherche Soccer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div id="layout">
+        <div id="main">
+            <div class="page-header">
+                <div class="subtitle">INF6253‑PROJET‑P1</div>
+                <h1>Moteur de recherche</h1>
+            </div>
+
+            <div class="search-box">
+
+                <h3>Choisissez le moteur :</h3>
+
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="engine" value="OLD" checked>
+                        <span>Moteur HTML (classique)</span>
+                    </label>
+
+                    <label class="radio-option">
+                        <input type="radio" name="engine" value="RDFa">
+                        <span>Moteur RDFa (enrichi)</span>
+                    </label>
+
+                    <label class="radio-option">
+                        <input type="radio" name="engine" value="SPARQL">
+                        <span>Moteur SPARQL (triplestore)</span>
+                    </label>
+                </div>
+
+                <select id="query" class="combo-box">
+                    <option disabled selected>Choisissez une question...</option>
+                    <option>Quelle équipe est première au classement ?</option>
+                    <option>Combien de matchs ont été joués cette saison ?</option>
+                    <option>Quel est le nombre total de buts marqués cette saison ?</option>
+                    <option>Quelle équipe a marqué le plus de buts ?</option>
+                    <option>Quelles équipes ont marqué plus de 70 buts cette saison ?</option>
+                    <option>Quels matchs ont eu lieu en novembre 2008 ?</option>
+                    <option>Combien de victoires à domicile pour Manchester United ?</option>
+                    <option>Classement des équipes par victoires à l’extérieur</option>
+                    <option>Moyenne de buts marqués à l’extérieur par le Top 6</option>
+                    <option>Confrontations historiques entre le 1er et le 3e</option>
+                </select>
+
+
+                <button onclick="sendQuery()">Rechercher</button>
+            </div>
+
+            <div id="loader" class="loader"></div>
+
+            <div id="results" class="results">
+                <h3>Résultats :</h3>
+                <div id="output"></div>
+                <div class="time" id="time"></div>
+            </div>
+        </div>
+        <div id="bottom" class="bottom-box">
+            <h3>Comparatif des moteurs</h3>
+
+            <div class="engine-block">
+                <div class="icon">⚙️</div>
+                <div>
+                    <strong>Moteur classique</strong>
+                    <p>Extraction basée sur la structure HTML brute.<br>
+                    <em>Avantages :</em> simple, rapide.<br>
+                    <em>Limites :</em> très fragile.</p>
+                </div>
+            </div>
+
+            <div class="engine-block">
+                <div class="icon">🔗</div>
+                <div>
+                    <strong>Moteur RDFa</strong>
+                    <p>Extraction via les métadonnées Schema.org.<br>
+                    <em>Avantages :</em> robuste, sémantique.<br>
+                    <em>Limites :</em> dépend de la qualité des métadonnées.</p>
+                </div>
+            </div>
+
+            <div class="engine-block">
+                <div class="icon">🧠</div>
+                <div>
+                    <strong>Moteur SPARQL</strong>
+                    <p>Interrogation directe du graphe RDF via Fuseki.<br>
+                    <em>Avantages :</em> puissant, fiable, requêtes complexes.<br>
+                    <em>Limites :</em> nécessite un triplestore.</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <footer class="footer">
+        Réalisé par : <strong> Rivarole Tchinda | Christian Belibi | Marius Dombou </strong><br/>
+        © Copyright Groupe 5 — Tous droits réservés
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

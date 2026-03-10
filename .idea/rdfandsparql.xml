@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="RDFAndSPARQL.SPARQLEndpointProjectPersistentStateComponent">
+    <option name="genericConfigs">
+      <map>
+        <entry key="6551b3ae-2640-4060-a591-b0e46625d8c8">
+          <value>
+            <SPARQLEndpointGenericConfig>
+              <option name="endpointId" value="6551b3ae-2640-4060-a591-b0e46625d8c8" />
+              <option name="graphStoreUrl" value="http://localhost:3030/premierLeague/upload" />
+              <option name="name" value="premierLeague" />
+              <option name="queryUrl" value="http://localhost:3030/premierLeague/sparql" />
+              <option name="updateUrl" value="http://localhost:3030/premierLeague/sparql" />
+            </SPARQLEndpointGenericConfig>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
